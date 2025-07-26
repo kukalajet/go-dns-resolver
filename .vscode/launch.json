@@ -6,7 +6,7 @@
             "type": "go",
             "request": "launch",
             "mode": "debug",
-            "program": "${workspaceFolder}",
+            "program": "${workspaceFolder}/cmd/dsn-resolver",
             "env": {},
             "args": [],
             "showLog": true,
@@ -17,7 +17,7 @@
             "type": "go",
             "request": "launch",
             "mode": "debug",
-            "program": "${workspaceFolder}",
+            "program": "${workspaceFolder}/cmd/dsn-resolver",
             "env": {},
             "args": [
                 "example.com",
