@@ -1,0 +1,111 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch DNS Resolver",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}",
+            "env": {},
+            "args": [],
+            "showLog": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Launch DNS Resolver with Arguments",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}",
+            "env": {},
+            "args": [
+                "example.com",
+                "A"
+            ],
+            "showLog": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug Current File",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${file}",
+            "env": {},
+            "args": [],
+            "showLog": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Test Current Package",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}",
+            "env": {},
+            "args": [
+                "-test.v"
+            ],
+            "showLog": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Test DNS Package",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}/dns",
+            "env": {},
+            "args": [
+                "-test.v"
+            ],
+            "showLog": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Benchmark Tests",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}",
+            "env": {},
+            "args": [
+                "-test.bench=.",
+                "-test.benchmem"
+            ],
+            "showLog": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug Test (Current Function)",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}",
+            "env": {},
+            "args": [
+                "-test.run",
+                "^${input:testFunction}$"
+            ],
+            "showLog": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Attach to Process",
+            "type": "go",
+            "request": "attach",
+            "mode": "local",
+            "processId": "${command:pickProcess}",
+            "showLog": true
+        }
+    ],
+    "inputs": [
+        {
+            "id": "testFunction",
+            "description": "Test function name",
+            "default": "TestMain",
+            "type": "promptString"
+        }
+    ]
+}
